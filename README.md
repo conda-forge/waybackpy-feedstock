@@ -11,6 +11,11 @@ Summary: Python package that interfaces with the Internet Archive's Wayback Mach
 
 Development: https://github.com/akamhy/waybackpy
 
+Waybackpy is a Python package and a CLI tool that interfaces with the Wayback Machine API.
+Wayback Machine has 3 client side APIs: Save API, Availability API and CDX API.
+These three APIs can be accessed via the waybackpy either by importing it in a script or from the CLI.
+
+
 Current build status
 ====================
 
