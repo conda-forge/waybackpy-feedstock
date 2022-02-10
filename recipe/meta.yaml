@@ -1,5 +1,5 @@
 {% set name = "waybackpy" %}
-{% set version = "3.0.2" %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/waybackpy-{{ version }}.tar.gz
-  sha256: 4a8b66c5de6c1a62076de798a8b7000cad9782ec7de45ac5dc71cc00a4674c35
+  sha256: 8b1520c385f669b78afe3659fa0106a100032c02cd5adac7cdb315ccc756c9dc
 
 build:
   entry_points:
     - waybackpy = waybackpy.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - pip
-    - python >=3.4
+    - python >=3.7
   run:
     - click
-    - python >=3.4
+    - python >=3.7
     - requests
 
 test:
