@@ -1,5 +1,5 @@
 {% set name = "waybackpy" %}
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/waybackpy-{{ version }}.tar.gz
-  sha256: a4a2b3b7fbb9850d90b027f8d1a9d2a94483a962d36ba340194d62558f684b2c
+  sha256: c33b9e6570cc380d93b641c60257791580fb1acaa6c8aa5a2c95f5187c567227
 
 build:
   entry_points:
@@ -44,7 +44,7 @@ about:
     Waybackpy is a Python package and a CLI tool that interfaces with the Wayback Machine API.
     Wayback Machine has 3 client side APIs: Save API, Availability API and CDX API. 
     These three APIs can be accessed via the waybackpy either by importing it in a script or from the CLI.
-  
+
 
 extra:
   recipe-maintainers:
