@@ -1,5 +1,5 @@
 {% set name = "waybackpy" %}
-{% set version = "3.0.5" %}
+{% set version = "3.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/waybackpy-{{ version }}.tar.gz
-  sha256: c33b9e6570cc380d93b641c60257791580fb1acaa6c8aa5a2c95f5187c567227
+  sha256: 497a371756aba7644eb7ada0ebd4edb15cb8c53bc134cc973bf023a12caff83f
 
 build:
   entry_points:
