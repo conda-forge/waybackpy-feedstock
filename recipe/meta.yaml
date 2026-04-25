@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/waybackpy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/waybackpy-{{ version }}.tar.gz
   sha256: 497a371756aba7644eb7ada0ebd4edb15cb8c53bc134cc973bf023a12caff83f
 
 build:
@@ -14,15 +14,15 @@ build:
     - waybackpy = waybackpy.cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - click
-    - python >=3.7
+    - python >={{ python_min }}
     - requests
 
 test:
@@ -33,6 +33,7 @@ test:
     - waybackpy --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://akamhy.github.io/waybackpy/
